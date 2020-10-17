@@ -28,8 +28,8 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
         if (file_exists($image_path)) {
             $msg = 'File already exists, chose another or rename file.';
         }
-        else if ($_FILES['image']['size'] > 20000000) {
-            $msg = 'File size too big, max 20MB';
+        else if ($_FILES['image']['size'] > 50000000) {
+            $msg = 'File size too big, max 50MB';
         }
         else if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
             $msg = 'Invalid extension';

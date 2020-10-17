@@ -9,7 +9,7 @@ include 'functions.php';
 <div class="content home">
 	<h2>Log in</h2>
 	<div class="login">
-		<h1>Login</h1>
+		<h1>Log in</h1>
 		<form action="auth.php" method="post">
 			<label for="username">
 				<i class="fas fa-user"></i>
