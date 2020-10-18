@@ -41,7 +41,6 @@ function header_template($title) {
 			<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 			<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
 			<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-			<link rel="manifest" href="/manifest.json">
 			<meta name="msapplication-TileColor" content="#ffffff">
 			<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 			<meta name="theme-color" content="#ffffff">		
@@ -52,13 +51,14 @@ function header_template($title) {
 				<a href="index.php"> <i class="fas fa-image"></i>Anton's gallery</a>
 			</div>
 		</nav>
+
 	EOT;
 }
 // footer template
 function footer_template() {
 echo <<<EOT
-		<script src="script.js"></script>
 	</body>
+	<script type="text/javascript" src="script.js" charset=utf-8" defer></script>
 </html>
 EOT;
 }

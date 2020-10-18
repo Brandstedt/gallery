@@ -27,11 +27,10 @@ $image_width = 320;
 $image_height = 210;
 ?>
 
-<?=header_template('Gallery')?>
+<?=header_template('Anton\'s gallery')?>
 
 <div class="content home">
 	<h2>Image wall</h2>
-
 	<div class="con">
 		<?php
 		session_start();
@@ -57,7 +56,6 @@ $image_height = 210;
 			</select>
 		</form>
 	</div>
-
 	<div class="images">
 		<?php foreach ($images as $image): ?>
 		<?php if (file_exists($image['path'])): ?>
@@ -68,6 +66,7 @@ $image_height = 210;
 		<?php endif; ?>
 		<?php endforeach; ?>
 	</div>
+	<span id='toTopBtn' onclick='toTop()'>^</span>
 </div>
 <div class="image-popup"></div>
 

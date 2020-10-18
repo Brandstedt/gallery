@@ -1,4 +1,5 @@
 // container used to show an image popup
+
 let image_popup = document.querySelector('.image-popup');
 if (image_popup) {
 // Loop each image so we can add the on click event
@@ -27,6 +28,7 @@ document.querySelectorAll('.images a').forEach(img_link => {
 	};
 });
 // close popup by different means
+
 image_popup.onclick = e => {
 	if (e.target.className == 'image-popup') {
 		image_popup.style.display = "none";
@@ -38,7 +40,60 @@ document.addEventListener('keydown', function(event) {
 		image_popup.style.display = "none";
 	}
 });
-document.getElementById('close').onclick = function() {
-    image_popup.style.display = "none"; return false;
-};
 }
+
+// scroll to top feature
+mybutton = document.getElementById("toTopBtn");
+
+// show button when user scrolls down
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// scroll to top when user pushes the button
+function toTop() {
+	window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+/*
+
+// johans script
+
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+var rootElement = document.documentElement
+var TOGGLE_RATIO = 0.80
+
+function handleScroll() {
+
+  var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+  if ((rootElement.scrollTop / scrollTotal) > TOGGLE_RATIO) {
+
+    scrollToTopBtn.classList.add("showBtn")
+  } else {
+
+    scrollToTopBtn.classList.remove("showBtn")
+  }
+}
+
+function scrollToTop() {
+
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+
+scrollToTopBtn.addEventListener("click",
+	scrollToTop)
+
+document.addEventListener("scroll",
+	handleScroll)
+
+};
+*/
