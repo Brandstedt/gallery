@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #2f2f2f;
+    background-color: #050505;
     margin: 0;
 }
 .navtop {
@@ -143,7 +143,6 @@ body {
 .images {
     display: flex;
     flex-flow: wrap;
-    width: 1000px;
 }
 .images a {
     display: block;
@@ -172,9 +171,6 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
-}
-.images a:nth-child(3n) {
-    margin-right: 0;
 }
 .images .placeholder {
     display: flex;
@@ -430,9 +426,6 @@ body {
     justify-content: center;
     object-fit: cover;
 }
-.images a:nth-child(3n) {
-    margin-right: 15px;
-}
 .image-popup .con {
     background-color: #2f2f2f;
     width: 90%;
@@ -449,17 +442,14 @@ body {
 .home #toTopBtn {
     display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
     z-index: 99;
-    border: none;
-    outline: none;
     background-color: #252525;
-    opacity: 50%;
-    color: white;
+    opacity: 75%;
+    color: #ffffff;
     cursor: pointer;
-    padding: 15px;
+    padding: 5px;
     border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 24px;
 }

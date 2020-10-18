@@ -23,8 +23,8 @@ ELSE {
 	echo "Error: The query executed unsuccessfully";
 }
 // set image properties
-$image_width = 320;
-$image_height = 210;
+$image_width = 300;
+$image_height = 180;
 ?>
 
 <?=header_template('Anton\'s gallery')?>
@@ -46,6 +46,8 @@ $image_height = 210;
 			<?php
 		}
 		?>
+		<!--
+		// sort by dropdown list
 		<form class="form" action="" method="get">
 			<label class="label" for="sort_by">Sort by:</label>
 			<select id="sort_by" name="sort_by" onchange="this.form.submit()">
@@ -55,6 +57,7 @@ $image_height = 210;
 				<option value="z_to_a"<?=$sort_by=='z_to_a'?' selected':''?>>Z-A</option>
 			</select>
 		</form>
+		//-->
 	</div>
 	<div class="images">
 		<?php foreach ($images as $image): ?>
