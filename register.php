@@ -6,7 +6,7 @@ include 'functions.php';
 
 $host = 'localhost';
 $user = 'root';
-$pass = '4ntonb0r1r@uma';
+$pass = '';
 $name = 'gallery';
 $charset = 'utf8';
 

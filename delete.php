@@ -32,8 +32,9 @@ if (isset ($_GET['id'])) {
 			$stmt->execute([$_GET['id']]);
 			// output message
 			$msg = 'Deleted';
-			sleep(1.5);
-			header('Location: index.php');
+			?>
+            <meta http-equiv="refresh" content="1; URL=index.php">            
+            <?php
 		} else {
 			// no -> redirect home
 			header('Location: index.php');

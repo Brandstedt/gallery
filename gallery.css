@@ -69,6 +69,7 @@ body {
 .content p {
     padding: 25px 0;
     margin: 0;
+    color: #ffffff;
 }
 .content .form {
     border-radius: 5px;
@@ -232,6 +233,7 @@ body {
     width: 100%;
     padding: 10px 0;
     margin-right: 25px;
+    color: #ffffff;
 }
 .upload form input, .upload form textarea {
     padding: 10px;
@@ -239,6 +241,7 @@ body {
     margin-right: 25px;
     margin-bottom: 15px;
     border: 1px solid #cccccc;
+    color: #252525;
 }
 .upload form textarea {
     height: 200px;

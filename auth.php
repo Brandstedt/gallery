@@ -7,7 +7,7 @@ include 'functions.php';
 session_start();
 	$host = 'localhost';
 	$user = 'root';
-	$pass = '4ntonb0r1r@uma';
+	$pass = '';
 	$name = 'gallery';
 	$charset = 'utf8';
 
@@ -39,6 +39,9 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE username = ?'))
 			$_SESSION['name'] = $_POST['username'];
 			$_SESSION['id'] = $id;
 			$msg = 'Welcome ' . $_SESSION['name'];
+			?>
+            <meta http-equiv="refresh" content="1; URL=index.php">            
+            <?php
 		} else {
 			// incorrect password
 			$msg = 'Incorrect username/password';

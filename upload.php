@@ -24,7 +24,7 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
     $image_path = $target_dir . basename($_FILES['image']['name']);
     $imageFileType = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
     // validate file
-    if (!empty($_FILES['image']['tmp_name']) && getimagesize($_FILES['image']['tmp_name'])) {
+    if (!empty($_FILES['image']['tmp_name'])) {
         if (file_exists($image_path)) {
             $msg = 'File already exists, chose another or rename file.';
         }
@@ -43,8 +43,9 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
                 $stmt = $pdo->prepare('INSERT INTO images VALUES (NULL, ?, ?, ?, CURRENT_TIMESTAMP)');
                 $stmt->execute([$_POST['title'], $_POST['description'], $image_path]); 
                 $msg = 'Image uploaded successfully';
-                sleep(1.5);
-                header('Location: index.php');                
+                ?>
+                <meta http-equiv="refresh" content="1; URL=index.php">            
+                <?php
             } else {
                 $msg = 'Error uploading image';
             }                       
@@ -68,11 +69,6 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
 	    <input type="submit" value="Upload Image" name="submit">
 	</form>
 	<p><?=$msg?></p>
-    <?php if ($msg == 'Image uploded successfully') {
-        sleep(1.5);
-        header('Location: index.php');
-    }
-    ?>
 </div>
 
 <?=footer_template()?>
