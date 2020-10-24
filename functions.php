@@ -48,7 +48,7 @@ function header_template($title) {
 		<body>
 		<nav class="navtop">
 			<div>
-				<a href="index.php"> <i class="fas fa-image"></i>Anton's gallery</a>
+				<a href="index.php">Home</a>
 			</div>
 		</nav>
 

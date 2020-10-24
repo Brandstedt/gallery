@@ -10,7 +10,6 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
-
 // set max upload file size
 ini_set('post_max_size', '50M');
 ini_set('upload_max_filesize', '50M');
@@ -23,8 +22,9 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
     // path of the new image file
     $image_path = $target_dir . basename($_FILES['image']['name']);
     $imageFileType = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+
     // validate file
-    if (!empty($_FILES['image']['tmp_name'])) {
+ if (!empty($_FILES['image']['tmp_name'])) {
         if (file_exists($image_path)) {
             $msg = 'File already exists, chose another or rename file.';
         }
@@ -55,6 +55,7 @@ if (isset($_FILES['image'], $_POST['title'], $_POST['description'])) {
     }
 }
 ?>
+
 
 <?=header_template('Upload Image')?>
 <div class="content upload">
